@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System;
 using System.Net;
 using System.IO;
 using System.Net.Http;
 
-namespace SystemTrayApp
+namespace RokuRemote
 {
     public partial class AppWindow : Form
 
@@ -168,9 +167,67 @@ namespace SystemTrayApp
             this.send_request(func);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            string ip = textBox1.Text;
+            string func;
+            switch (keyData)
+            {
+                case Keys.Left: // left arrow key
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/Left";
+                    this.send_request(func);
+                    return true;
 
+                case Keys.Right: // right arrow key
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/Right";
+                    this.send_request(func);
+                    return true;
+
+                case Keys.Up: // up arrow key
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/Up";
+                    this.send_request(func);
+                    return true;
+
+                case Keys.Down: // down arrow key
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/Down";
+                    this.send_request(func);
+                    return true;
+
+                case Keys.Enter: // enter
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/Select";
+                    this.send_request(func);
+                    return true;
+
+                case Keys.Back: // backspace
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/Back";
+                    this.send_request(func);
+                    return true;
+
+                case Keys.OemMinus: // minus button
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/VolumeDown";
+                    this.send_request(func);
+                    return true;
+
+                case Keys.Oemplus: // plus button
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/VolumeUp";
+                    this.send_request(func);
+                    return true;
+
+                case Keys.D0: // zero button
+                    ip = textBox1.Text;
+                    func = "http://" + ip + ":8060/keypress/VolumeMute";
+                    this.send_request(func);
+                    return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
