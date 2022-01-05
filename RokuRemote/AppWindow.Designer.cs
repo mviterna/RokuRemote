@@ -1,4 +1,4 @@
-﻿namespace SystemTrayApp
+namespace RokuRemote
 {
     partial class AppWindow
     {
@@ -57,6 +57,7 @@
             this.home.Name = "home";
             this.home.Size = new System.Drawing.Size(78, 43);
             this.home.TabIndex = 0;
+            this.home.TabStop = false;
             this.home.Text = "Home";
             this.home.UseVisualStyleBackColor = true;
             this.home.Click += new System.EventHandler(this.home_Click);
@@ -67,6 +68,7 @@
             this.volUp.Name = "volUp";
             this.volUp.Size = new System.Drawing.Size(102, 45);
             this.volUp.TabIndex = 1;
+            this.volUp.TabStop = false;
             this.volUp.Text = "Volume Up";
             this.volUp.UseVisualStyleBackColor = true;
             this.volUp.Click += new System.EventHandler(this.volUp_Click);
@@ -77,6 +79,7 @@
             this.volDown.Name = "volDown";
             this.volDown.Size = new System.Drawing.Size(102, 45);
             this.volDown.TabIndex = 2;
+            this.volDown.TabStop = false;
             this.volDown.Text = "Volume Down";
             this.volDown.UseVisualStyleBackColor = true;
             this.volDown.Click += new System.EventHandler(this.volDown_Click);
@@ -87,6 +90,7 @@
             this.mute.Name = "mute";
             this.mute.Size = new System.Drawing.Size(90, 45);
             this.mute.TabIndex = 3;
+            this.mute.TabStop = false;
             this.mute.Text = "Mute";
             this.mute.UseVisualStyleBackColor = true;
             this.mute.Click += new System.EventHandler(this.mute_Click);
@@ -97,6 +101,7 @@
             this.upNav.Name = "upNav";
             this.upNav.Size = new System.Drawing.Size(86, 42);
             this.upNav.TabIndex = 4;
+            this.upNav.TabStop = false;
             this.upNav.Text = "Up";
             this.upNav.UseVisualStyleBackColor = true;
             this.upNav.Click += new System.EventHandler(this.upNav_Click);
@@ -107,6 +112,7 @@
             this.downNav.Name = "downNav";
             this.downNav.Size = new System.Drawing.Size(86, 42);
             this.downNav.TabIndex = 5;
+            this.downNav.TabStop = false;
             this.downNav.Text = "Down";
             this.downNav.UseVisualStyleBackColor = true;
             this.downNav.Click += new System.EventHandler(this.downNav_Click);
@@ -117,6 +123,7 @@
             this.rightNav.Name = "rightNav";
             this.rightNav.Size = new System.Drawing.Size(59, 35);
             this.rightNav.TabIndex = 6;
+            this.rightNav.TabStop = false;
             this.rightNav.Text = "Right";
             this.rightNav.UseVisualStyleBackColor = true;
             this.rightNav.Click += new System.EventHandler(this.rightNav_Click);
@@ -127,6 +134,7 @@
             this.leftNav.Name = "leftNav";
             this.leftNav.Size = new System.Drawing.Size(64, 35);
             this.leftNav.TabIndex = 7;
+            this.leftNav.TabStop = false;
             this.leftNav.Text = "Left";
             this.leftNav.UseVisualStyleBackColor = true;
             this.leftNav.Click += new System.EventHandler(this.leftNav_Click);
@@ -137,6 +145,7 @@
             this.backNav.Name = "backNav";
             this.backNav.Size = new System.Drawing.Size(71, 43);
             this.backNav.TabIndex = 8;
+            this.backNav.TabStop = false;
             this.backNav.Text = "Back";
             this.backNav.UseVisualStyleBackColor = true;
             this.backNav.Click += new System.EventHandler(this.backNav_Click);
@@ -147,6 +156,7 @@
             this.playBtn.Name = "playBtn";
             this.playBtn.Size = new System.Drawing.Size(90, 45);
             this.playBtn.TabIndex = 9;
+            this.playBtn.TabStop = false;
             this.playBtn.Text = "Play/Pause";
             this.playBtn.UseVisualStyleBackColor = true;
             this.playBtn.Click += new System.EventHandler(this.playBtn_Click);
@@ -157,6 +167,7 @@
             this.enterBtn.Name = "enterBtn";
             this.enterBtn.Size = new System.Drawing.Size(75, 23);
             this.enterBtn.TabIndex = 10;
+            this.enterBtn.TabStop = false;
             this.enterBtn.Text = "Enter";
             this.enterBtn.UseVisualStyleBackColor = true;
             this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
@@ -167,6 +178,7 @@
             this.pwrBtn.Name = "pwrBtn";
             this.pwrBtn.Size = new System.Drawing.Size(34, 27);
             this.pwrBtn.TabIndex = 11;
+            this.pwrBtn.TabStop = false;
             this.pwrBtn.Text = "Pwr";
             this.pwrBtn.UseVisualStyleBackColor = true;
             this.pwrBtn.Click += new System.EventHandler(this.pwrBtn_Click);
@@ -176,7 +188,8 @@
             this.textBox1.Location = new System.Drawing.Point(30, 49);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 12;
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TabStop = false;
             // 
             // AppWindow
             // 
@@ -196,6 +209,7 @@
             this.Controls.Add(this.volDown);
             this.Controls.Add(this.volUp);
             this.Controls.Add(this.home);
+            this.KeyPreview = true;
             this.Name = "AppWindow";
             this.ResumeLayout(false);
             this.PerformLayout();
