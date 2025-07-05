@@ -43,6 +43,7 @@ namespace RokuRemote
             this.enterBtn = new System.Windows.Forms.Button();
             this.pwrBtn = new System.Windows.Forms.Button();
             this.helpBtn = new System.Windows.Forms.Button();
+            this.optionsBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@ namespace RokuRemote
             // 
             // volDown
             // 
-            this.volDown.Location = new System.Drawing.Point(13, 202);
+            this.volDown.Location = new System.Drawing.Point(18, 202);
             this.volDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.volDown.Name = "volDown";
             this.volDown.Size = new System.Drawing.Size(153, 69);
@@ -208,6 +209,19 @@ namespace RokuRemote
             this.helpBtn.UseVisualStyleBackColor = true;
             this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
             // 
+            // optionsBtn
+            // 
+            this.optionsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionsBtn.Location = new System.Drawing.Point(258, 287);
+            this.optionsBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.optionsBtn.Name = "optionsBtn";
+            this.optionsBtn.Size = new System.Drawing.Size(56, 42);
+            this.optionsBtn.TabIndex = 13;
+            this.optionsBtn.TabStop = false;
+            this.optionsBtn.Text = "*";
+            this.optionsBtn.UseVisualStyleBackColor = true;
+            this.optionsBtn.Click += new System.EventHandler(this.optionsBtn_Click);
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(67, 75);
@@ -222,6 +236,7 @@ namespace RokuRemote
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 475);
+            this.Controls.Add(this.optionsBtn);
             this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pwrBtn);
@@ -260,6 +275,7 @@ namespace RokuRemote
         private System.Windows.Forms.Button enterBtn;
         private System.Windows.Forms.Button pwrBtn;
         private System.Windows.Forms.Button helpBtn;
+        private System.Windows.Forms.Button optionsBtn;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

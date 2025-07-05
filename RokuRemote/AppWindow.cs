@@ -162,6 +162,13 @@ namespace RokuRemote
             this.send_request(func);
         }
 
+        private void optionsBtn_Click(object sender, EventArgs e)
+        {
+            string ip = textBox1.Text;
+            string func = "http://" + ip + ":8060/keypress/Info";
+            this.send_request(func);
+        }
+
         private void helpBtn_Click(object sender, EventArgs e)
         {
             string shortcuts =
@@ -172,7 +179,8 @@ namespace RokuRemote
                 "Backspace          : Back\n" +
                 "- (minus)          : Volume Down\n" +
                 "+ (plus)           : Volume Up\n" +
-                "0 (zero)           : Mute\n";
+                "0 (zero)           : Mute\n" +
+                "* (asterisk)       : Options\n";
             MessageBox.Show(shortcuts, "Roku Remote Shortcuts", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -183,6 +191,7 @@ namespace RokuRemote
         // - (minus): Volume Down
         // + (plus): Volume Up
         // 0: Mute
+        // * (asterisk): Options
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             string ip = textBox1.Text;
@@ -231,6 +240,11 @@ namespace RokuRemote
 
                 case Keys.D0: // zero button
                     func = "http://" + ip + ":8060/keypress/VolumeMute";
+                    this.send_request(func);
+                    return true;
+
+                case Keys.Multiply: // * (asterisk) key
+                    func = "http://" + ip + ":8060/keypress/Info";
                     this.send_request(func);
                     return true;
             }
