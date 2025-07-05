@@ -1,14 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
-using System.IO;
 using System.Net.Http;
 
 namespace RokuRemote
@@ -21,6 +13,9 @@ namespace RokuRemote
         {
             InitializeComponent();
             this.CenterToScreen();
+
+            // Ensure the form receives key events before controls for keyboard shortcuts
+            this.KeyPreview = true;
 
             textBox1.Text = "192.168.1.100";
 
@@ -44,7 +39,7 @@ namespace RokuRemote
             this.Resize += WindowResize;
             this.FormClosing += WindowClosing;
         }
-        
+
         private void SystemTrayIconDoubleClick(object sender, MouseEventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -167,6 +162,27 @@ namespace RokuRemote
             this.send_request(func);
         }
 
+        private void helpBtn_Click(object sender, EventArgs e)
+        {
+            string shortcuts =
+                "Keyboard Shortcuts:\n" +
+                "--------------------------\n" +
+                "Up/Down/Left/Right : Navigation\n" +
+                "Enter              : Select\n" +
+                "Backspace          : Back\n" +
+                "- (minus)          : Volume Down\n" +
+                "+ (plus)           : Volume Up\n" +
+                "0 (zero)           : Mute\n";
+            MessageBox.Show(shortcuts, "Roku Remote Shortcuts", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        // Keyboard shortcut handling for navigation and volume
+        // Arrow keys: Up/Down/Left/Right
+        // Enter: Select
+        // Backspace: Back
+        // - (minus): Volume Down
+        // + (plus): Volume Up
+        // 0: Mute
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             string ip = textBox1.Text;
@@ -174,55 +190,46 @@ namespace RokuRemote
             switch (keyData)
             {
                 case Keys.Left: // left arrow key
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/Left";
                     this.send_request(func);
                     return true;
 
                 case Keys.Right: // right arrow key
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/Right";
                     this.send_request(func);
                     return true;
 
                 case Keys.Up: // up arrow key
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/Up";
                     this.send_request(func);
                     return true;
 
                 case Keys.Down: // down arrow key
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/Down";
                     this.send_request(func);
                     return true;
 
                 case Keys.Enter: // enter
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/Select";
                     this.send_request(func);
                     return true;
 
                 case Keys.Back: // backspace
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/Back";
                     this.send_request(func);
                     return true;
 
                 case Keys.OemMinus: // minus button
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/VolumeDown";
                     this.send_request(func);
                     return true;
 
                 case Keys.Oemplus: // plus button
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/VolumeUp";
                     this.send_request(func);
                     return true;
 
                 case Keys.D0: // zero button
-                    ip = textBox1.Text;
                     func = "http://" + ip + ":8060/keypress/VolumeMute";
                     this.send_request(func);
                     return true;

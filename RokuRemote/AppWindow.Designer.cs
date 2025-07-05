@@ -10,7 +10,7 @@ namespace RokuRemote
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -42,6 +42,7 @@ namespace RokuRemote
             this.playBtn = new System.Windows.Forms.Button();
             this.enterBtn = new System.Windows.Forms.Button();
             this.pwrBtn = new System.Windows.Forms.Button();
+            this.helpBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -53,9 +54,10 @@ namespace RokuRemote
             // 
             // home
             // 
-            this.home.Location = new System.Drawing.Point(0, 0);
+            this.home.Location = new System.Drawing.Point(19, 0);
+            this.home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.home.Name = "home";
-            this.home.Size = new System.Drawing.Size(78, 43);
+            this.home.Size = new System.Drawing.Size(117, 66);
             this.home.TabIndex = 0;
             this.home.TabStop = false;
             this.home.Text = "Home";
@@ -64,9 +66,10 @@ namespace RokuRemote
             // 
             // volUp
             // 
-            this.volUp.Location = new System.Drawing.Point(0, 80);
+            this.volUp.Location = new System.Drawing.Point(13, 123);
+            this.volUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.volUp.Name = "volUp";
-            this.volUp.Size = new System.Drawing.Size(102, 45);
+            this.volUp.Size = new System.Drawing.Size(153, 69);
             this.volUp.TabIndex = 1;
             this.volUp.TabStop = false;
             this.volUp.Text = "Volume Up";
@@ -75,9 +78,10 @@ namespace RokuRemote
             // 
             // volDown
             // 
-            this.volDown.Location = new System.Drawing.Point(0, 131);
+            this.volDown.Location = new System.Drawing.Point(13, 202);
+            this.volDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.volDown.Name = "volDown";
-            this.volDown.Size = new System.Drawing.Size(102, 45);
+            this.volDown.Size = new System.Drawing.Size(153, 69);
             this.volDown.TabIndex = 2;
             this.volDown.TabStop = false;
             this.volDown.Text = "Volume Down";
@@ -86,9 +90,10 @@ namespace RokuRemote
             // 
             // mute
             // 
-            this.mute.Location = new System.Drawing.Point(108, 80);
+            this.mute.Location = new System.Drawing.Point(179, 123);
+            this.mute.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mute.Name = "mute";
-            this.mute.Size = new System.Drawing.Size(90, 45);
+            this.mute.Size = new System.Drawing.Size(135, 69);
             this.mute.TabIndex = 3;
             this.mute.TabStop = false;
             this.mute.Text = "Mute";
@@ -97,9 +102,10 @@ namespace RokuRemote
             // 
             // upNav
             // 
-            this.upNav.Location = new System.Drawing.Point(63, 195);
+            this.upNav.Location = new System.Drawing.Point(111, 281);
+            this.upNav.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.upNav.Name = "upNav";
-            this.upNav.Size = new System.Drawing.Size(86, 42);
+            this.upNav.Size = new System.Drawing.Size(129, 55);
             this.upNav.TabIndex = 4;
             this.upNav.TabStop = false;
             this.upNav.Text = "Up";
@@ -108,9 +114,10 @@ namespace RokuRemote
             // 
             // downNav
             // 
-            this.downNav.Location = new System.Drawing.Point(63, 284);
+            this.downNav.Location = new System.Drawing.Point(111, 410);
+            this.downNav.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.downNav.Name = "downNav";
-            this.downNav.Size = new System.Drawing.Size(86, 42);
+            this.downNav.Size = new System.Drawing.Size(129, 50);
             this.downNav.TabIndex = 5;
             this.downNav.TabStop = false;
             this.downNav.Text = "Down";
@@ -119,9 +126,10 @@ namespace RokuRemote
             // 
             // rightNav
             // 
-            this.rightNav.Location = new System.Drawing.Point(152, 243);
+            this.rightNav.Location = new System.Drawing.Point(237, 346);
+            this.rightNav.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rightNav.Name = "rightNav";
-            this.rightNav.Size = new System.Drawing.Size(59, 35);
+            this.rightNav.Size = new System.Drawing.Size(88, 54);
             this.rightNav.TabIndex = 6;
             this.rightNav.TabStop = false;
             this.rightNav.Text = "Right";
@@ -130,9 +138,10 @@ namespace RokuRemote
             // 
             // leftNav
             // 
-            this.leftNav.Location = new System.Drawing.Point(0, 243);
+            this.leftNav.Location = new System.Drawing.Point(13, 346);
+            this.leftNav.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.leftNav.Name = "leftNav";
-            this.leftNav.Size = new System.Drawing.Size(64, 35);
+            this.leftNav.Size = new System.Drawing.Size(96, 54);
             this.leftNav.TabIndex = 7;
             this.leftNav.TabStop = false;
             this.leftNav.Text = "Left";
@@ -141,9 +150,10 @@ namespace RokuRemote
             // 
             // backNav
             // 
-            this.backNav.Location = new System.Drawing.Point(78, 0);
+            this.backNav.Location = new System.Drawing.Point(144, -1);
+            this.backNav.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backNav.Name = "backNav";
-            this.backNav.Size = new System.Drawing.Size(71, 43);
+            this.backNav.Size = new System.Drawing.Size(106, 66);
             this.backNav.TabIndex = 8;
             this.backNav.TabStop = false;
             this.backNav.Text = "Back";
@@ -152,9 +162,10 @@ namespace RokuRemote
             // 
             // playBtn
             // 
-            this.playBtn.Location = new System.Drawing.Point(108, 131);
+            this.playBtn.Location = new System.Drawing.Point(179, 202);
+            this.playBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.playBtn.Name = "playBtn";
-            this.playBtn.Size = new System.Drawing.Size(90, 45);
+            this.playBtn.Size = new System.Drawing.Size(135, 69);
             this.playBtn.TabIndex = 9;
             this.playBtn.TabStop = false;
             this.playBtn.Text = "Play/Pause";
@@ -163,9 +174,10 @@ namespace RokuRemote
             // 
             // enterBtn
             // 
-            this.enterBtn.Location = new System.Drawing.Point(71, 249);
+            this.enterBtn.Location = new System.Drawing.Point(117, 356);
+            this.enterBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.enterBtn.Name = "enterBtn";
-            this.enterBtn.Size = new System.Drawing.Size(75, 23);
+            this.enterBtn.Size = new System.Drawing.Size(112, 35);
             this.enterBtn.TabIndex = 10;
             this.enterBtn.TabStop = false;
             this.enterBtn.Text = "Enter";
@@ -174,28 +186,43 @@ namespace RokuRemote
             // 
             // pwrBtn
             // 
-            this.pwrBtn.Location = new System.Drawing.Point(164, 8);
+            this.pwrBtn.Location = new System.Drawing.Point(258, 0);
+            this.pwrBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pwrBtn.Name = "pwrBtn";
-            this.pwrBtn.Size = new System.Drawing.Size(34, 27);
+            this.pwrBtn.Size = new System.Drawing.Size(56, 42);
             this.pwrBtn.TabIndex = 11;
             this.pwrBtn.TabStop = false;
             this.pwrBtn.Text = "Pwr";
             this.pwrBtn.UseVisualStyleBackColor = true;
             this.pwrBtn.Click += new System.EventHandler(this.pwrBtn_Click);
             // 
+            // helpBtn
+            // 
+            this.helpBtn.Location = new System.Drawing.Point(258, 52);
+            this.helpBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.helpBtn.Name = "helpBtn";
+            this.helpBtn.Size = new System.Drawing.Size(56, 42);
+            this.helpBtn.TabIndex = 12;
+            this.helpBtn.TabStop = false;
+            this.helpBtn.Text = "Help";
+            this.helpBtn.UseVisualStyleBackColor = true;
+            this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 49);
+            this.textBox1.Location = new System.Drawing.Point(67, 75);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
+            this.textBox1.Size = new System.Drawing.Size(151, 26);
             this.textBox1.TabIndex = 1;
             this.textBox1.TabStop = false;
             // 
             // AppWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(210, 338);
+            this.ClientSize = new System.Drawing.Size(337, 475);
+            this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pwrBtn);
             this.Controls.Add(this.enterBtn);
@@ -210,6 +237,7 @@ namespace RokuRemote
             this.Controls.Add(this.volUp);
             this.Controls.Add(this.home);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AppWindow";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,6 +259,7 @@ namespace RokuRemote
         private System.Windows.Forms.Button playBtn;
         private System.Windows.Forms.Button enterBtn;
         private System.Windows.Forms.Button pwrBtn;
+        private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
